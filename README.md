@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Screenshot
 
-![]Mobile (./mobile-screen.png)
-![]Desktop (./desktop-screen.png)
+![](./mobile-screen.png)
+![](./desktop-screen.png)
 
 ### Links
 
