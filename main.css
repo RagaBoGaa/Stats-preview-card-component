@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* Reset */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Start Global Rules */
+image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 15px;
+  background-color: var(--Main-bg);
+  padding: 11rem;
+  max-width: 1440px;
+  height: 100vh;
+  font-family: var(--font-f1);
+}
+html {
+  font-size: 10px;
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 3.6rem;
+  color: var(--Main-heading);
+}
+
+p {
+  line-height: 1.7;
+  color: var(--Stat-heading);
+}
+/* End Global Rules */
+
+/* Start Variables */
+:root {
+  /* Typography */
+  --font-f1: "Inter", sans-serif; /* weight 400 & 700 */
+  --font-f2: "Lexend Deca", sans-serif; /* weight 400 */
+
+  /* Colors */
+  --Main-bg: hsl(233, 47%, 7%);
+  --Card-bg: hsl(244, 38%, 16%);
+  --Accent: hsl(277, 64%, 61%);
+  --Main-heading: hsl(0, 0%, 100%);
+  --MainParagraph: hsla(0, 0%, 100%, 0.75);
+  --Stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+/* End Variables */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Card-bg);
+  height: 446px;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+.container .main h1 span {
+  color: var(--Accent);
+}
+
+.container .info {
+  height: 80%;
+  padding: 3rem 13rem 0rem 9rem;
+}
+.container .info .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-top: 6rem;
+  font-family: var(--font-f1);
+  letter-spacing: 1px;
+}
+.container .info .stats h3 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.container .info .stats p {
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.container .image {
+  background: url(images/image-header-desktop.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-width: 540px;
+  position: relative;
+}
+.container .image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 92, 219, 0.75);
+}
+
+footer .attribution {
+  font-size: 9px;
+  text-align: center;
+  color: var(--Main-heading);
+}
+footer .attribution a {
+  color: var(--Accent);
+}
+
+/* Media Small Screen */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  body {
+    margin-top: 10px;
+    padding: 7%;
+    min-height: 100vh;
+  }
+  .card {
+    min-height: 600px;
+  }
+  .container {
+    flex-direction: column-reverse;
+    min-height: 750px;
+  }
+  .container .image {
+    min-width: 100%;
+    background-image: url(images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+  .container .main {
+    margin-top: 20px;
+  }
+  .container .info {
+    padding: 5% 7% 0;
+    text-align: center;
+    height: auto;
+  }
+  .container .info .stats h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .container .info .stats {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 0;
+    text-align: center;
+  }
+  .container .info .stats .stat {
+    margin-bottom: 20px;
+  }
+}
